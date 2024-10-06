@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Objetivos de Desarrollo Sostenible</title>
+    <!-- Fuente Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFAE6; /* Color crema claro */
+            color: #333;
+        }
+
+        /* Header de la página */
+        .header {
+            background-color: #fba300; /* Dorado similar a la miel */
+            color: #4B3F1D; /* Marrón oscuro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 300px; /* Ajusta este valor según el tamaño deseado */
+            height: auto;
+        }
+
+        /* Sección del niño abeja */
+        .bee-child {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #FFF2B2; /* Amarillo suave */
+        }
+
+        .bee-child img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .bee-child h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4B3F1D; /* Marrón oscuro */
+        }
+
+        .bee-child p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B3F1D; /* Marrón oscuro */
+        }
+
+        /* Sección introductoria */
+        .intro {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #FFFAE6; /* Color crema claro */
+        }
+
+        .intro h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4B3F1D; /* Marrón oscuro */
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B3F1D; /* Marrón oscuro */
+        }
+
+        /* Contenedor de los botones de ODS */
+        .ods-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            grid-gap: 10px;
+            padding: 20px;
+            background-color: #FFF6D1; /* Amarillo claro */
+            justify-items: center;
+        }
+
+        /* Botones de cada ODS en forma de hexágono */
+        .ods-button {
+            position: relative;
+            width: 225px;
+            height: 260px; /* Altura para un hexágono regular */
+            background-color: #FFE082; /* Amarillo miel */
+            text-align: center;
+            text-decoration: none;
+            color: #4B3F1D; /* Marrón oscuro */
+            overflow: hidden;
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+            box-shadow: 0px 4px 8px rgba(75, 63, 29, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px 0;
+        }
+
+        .ods-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(75, 63, 29, 0.3);
+        }
+
+        /* Contenido dentro del hexágono */
+        .ods-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .ods-content img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .ods-content p {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1em;
+            color: #4B3F1D; /* Marrón oscuro */
+            padding: 0 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4B3F1D; /* Marrón oscuro */
+            color: #FFD700; /* Dorado similar a la miel */
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Media Queries para adaptabilidad */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .intro h1, .bee-child h2 {
+                font-size: 1.5em;
+            }
+
+            .ods-button {
+                width: 150px;
+                height: 173px;
+            }
+
+            .ods-content img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .ods-content p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/Logo de la pagina.png" alt="Logo de la página">
+        </div>
+        <h1>Objetivos de Desarrollo Sostenible (ODS)</h1>
+        <p>Conoce los 17 Objetivos de Desarrollo Sostenible para hacer del mundo un lugar mejor.</p>
+    </header>
+
+    <!-- Sección del niño abeja -->
+    <section class="bee-child">
+        <img src="ruta/a/imagen_nino_abeja.jpg" alt="Niño Abeja">
+        <h2>Conoce al Niño Abeja</h2>
+        <p>El Niño Abeja es nuestro símbolo de esperanza y trabajo en equipo. Representa la importancia de cada individuo en la construcción de un futuro sostenible para todos.</p>
+    </section>
+
+    <!-- Sección introductoria -->
+    <section class="intro">
+        <h1>¿Qué son los ODS?</h1>
+        <p>Los Objetivos de Desarrollo Sostenible son un llamado universal a la acción para poner fin a la pobreza, proteger el planeta y mejorar la vida y las perspectivas de todas las personas en todo el mundo. Adoptados por todos los Estados Miembros de las Naciones Unidas en 2015, los 17 ODS son parte de la Agenda 2030 para el Desarrollo Sostenible.</p>
+    </section>
+
+
+    <!-- Contenedor de los botones de ODS -->
+    <section class="ods-container">
+        <!-- Botón ODS 1 -->
+        <a href="SDG1.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 1.png" alt="SDG 1">
+                <p>ODS 1: Fin de la Pobreza</p>
+            </div>
+        </a>
+        <!-- Botón ODS 2 -->
+        <a href="SDG2.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 2.png" alt="SDG 2">
+                <p>ODS 2: Hambre Cero</p>
+            </div>
+        </a>
+        <!-- Botón ODS 3 -->
+        <a href="SDG3.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 3.png" alt="SDG 3">
+                <p>ODS 3: Salud y Bienestar</p>
+            </div>
+        </a>
+        <!-- Botón ODS 4 -->
+        <a href="SDG4.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 4.png" alt="SDG 4">
+                <p>ODS 4: Educación de Calidad</p>
+            </div>
+        </a>
+        <!-- Botón ODS 5 -->
+        <a href="SDG5.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 5.png" alt="SDG 5">
+                <p>ODS 5: Igualdad de Género</p>
+            </div>
+        </a>
+        <!-- Botón ODS 6 -->
+        <a href="SDG6.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 6.png" alt="SDG 6">
+                <p>ODS 6: Agua Limpia y Saneamiento</p>
+            </div>
+        </a>
+        <!-- Botón ODS 7 -->
+        <a href="SDG7.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 7.png" alt="SDG 7">
+                <p>ODS 7: Energía Asequible y No Contaminante</p>
+            </div>
+        </a>
+        <!-- Botón ODS 8 -->
+        <a href="SDG8.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 8.png" alt="SDG 8">
+                <p>ODS 8: Trabajo Decente y Crecimiento Económico</p>
+            </div>
+        </a>
+        <!-- Botón ODS 9 -->
+        <a href="SDG9.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 9.png" alt="SDG 9">
+                <p>ODS 9: Industria, Innovación e Infraestructura</p>
+            </div>
+        </a>
+        <!-- Botón ODS 10 -->
+        <a href="SDG10.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 10.png" alt="SDG 10">
+                <p>ODS 10: Reducción de las Desigualdades</p>
+            </div>
+        </a>
+        <!-- Botón ODS 11 -->
+        <a href="SDG11.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 11.png" alt="SDG 11">
+                <p>ODS 11: Ciudades y Comunidades Sostenibles</p>
+            </div>
+        </a>
+        <!-- Botón ODS 12 -->
+        <a href="SDG12.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 12.png" alt="SDG 12">
+                <p>ODS 12: Producción y Consumo Responsables</p>
+            </div>
+        </a>
+        <!-- Botón ODS 13 -->
+        <a href="SDG13.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 13.png" alt="SDG 13">
+                <p>ODS 13: Acción por el Clima</p>
+            </div>
+        </a>
+        <!-- Botón ODS 14 -->
+        <a href="SDG14.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 14.png" alt="SDG 14">
+                <p>ODS 14: Vida Submarina</p>
+            </div>
+        </a>
+        <!-- Botón ODS 15 -->
+        <a href="SDG15.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 15.png" alt="SDG 15">
+                <p>ODS 15: Vida de Ecosistemas Terrestres</p>
+            </div>
+        </a>
+        <!-- Botón ODS 16 -->
+        <a href="SDG16.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 16.png" alt="SDG 16">
+                <p>ODS 16: Paz, Justicia e Instituciones Sólidas</p>
+            </div>
+        </a>
+        <!-- Botón ODS 17 -->
+        <a href="SDG17.html" class="ods-button">
+            <div class="ods-content">
+                <img src="images/SDG 17.png" alt="SDG 17">
+                <p>ODS 17: Alianzas para Lograr los Objetivos</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Colmena Educativa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
